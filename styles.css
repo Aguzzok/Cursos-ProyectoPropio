@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap');
+
+:root {
+    --azul: #0066c8;
+    --verde: #00f7ff;
+  }
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+header{
+    height: 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0,102,200);
+    background: linear-gradient(0deg, rgba(0,102,200,1) 0%, rgba(0,194,255,1) 100%);
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: .1px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#menu__icon{
+    opacity: 0;
+}
+
+header .nav__logo{
+    font-size: 2rem;
+    color: white;
+}
+
+header .nav__bar a{
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    color: whitesmoke;
+}
+
+header .nav__bar a:nth-child(3){
+    border-bottom: 2px solid whitesmoke;
+    
+}
+
+header .nav__bar a:hover{
+    color: var(--verde);
+}
+
+
+
+#menu__bar{
+    display: none;
+}
+
+.search{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+header .search input{
+    width: 90%;
+    height: 1rem;
+    border-radius: 5rem;
+    padding: 1rem 1.5rem;
+
+}
+
+header .search label{
+    margin: .5rem;
+    padding: .1rem 1rem;
+    font-size: 1rem;
+    border: .2rem solid whitesmoke;
+    border-radius: 5rem;
+    background: #fff;
+    color: #0066c8;
+}
+
+
+header label{
+    font-size: 3rem;
+    color: var(--verde);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+header label{
+    visibility: visible;
+    opacity: 1;
+}
+
+.continue{
+    padding: 1rem;
+    display: flex;
+    margin: 90px 15%;
+    align-items: center;
+    justify-content: center;
+    border-radius: .4rem;
+    background: rgb(0,102,200);
+    background: linear-gradient(0deg, rgba(0,102,200,1) 0%, rgba(0,194,255,1) 100%);
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+}
+
+.continue .continue_title{
+    font-size: 1.72rem;
+    color: whitesmoke;
+    text-shadow: 2px 3px 1px black;
+    margin: .5rem 1rem;
+}
+
+.continue .continue_paragraph{
+    font-size: 100%;
+    margin: .5rem 2rem;
+    color: aliceblue;
+    text-shadow: 3px 1px 1px rgba(0, 0, 0, .2);
+}
+
+.continue_video img{
+    width: 98%;
+    border-radius: .4rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+    
+}
+.categorys{
+
+    height: 300px;
+    width: 100%;
+    margin-top: -60px;
+}
+.categorys_container{
+    display: flex;
+    justify-content:space-around;
+}
+.categorys_box{
+    border-radius: .4rem;
+    padding: 1rem;
+    width: 15%;
+    background: rgb(0,102,200);
+    background: linear-gradient(0deg, rgba(0,102,200,1) 0%, rgba(0,194,255,1) 100%);
+    box-shadow: .3rem .5rem .4rem rgba(0, 0, 0, .6);
+}
+
+.categorys_box h5{
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.categorys_box .tech{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    border: 2px solid whitesmoke;
+    color: aliceblue;
+    border-radius: .5rem;
+    
+}
+
+.categorys_box li{
+    list-style: none;
+    padding: .5rem .6rem;
+    text-transform: capitalize;
+    font-size: 100%;
+    color: azure;
+}
+
+.btn{
+    text-align: center;
+    display: block;
+    margin-left: 10%;
+    margin-top: 10px;
+    width: 80%;
+    text-decoration: none;
+    border: 2px solid #222;
+    background-color: #111;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: var(--verde);
+    border-radius: 1rem;
+    text-transform: uppercase;
+    box-shadow: 0 .25rem .2rem rgba(0, 0, 0, .6);
+}
+
+
+
+
+
+@media(max-width: 1200px){
+
+    header .nav__bar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s ease;
+}
+    #menu__icon{
+        opacity: 1;
+        font-size: 2rem;
+        color: var(--verde);
+    }
+
+    header .nav__bar a{
+        display: block;
+        margin: .8rem 0;
+        font-size: 1rem;
+        color: var(--azul);
+}
+
+    header input:checked ~ .nav__bar{
+        transform: scaleY(1);
+        opacity: 1;
+}
+
+    header input:checked ~ label::before{
+        content: '\f00d'
+}
+
+.search{
+
+    width: 60%;
+
+}
+
+header .search input{
+    width: 90%;
+
+}
+
+header .search label{
+    margin: .5rem;
+    padding: .1rem 1rem;
+    font-size: 1rem;
+    border: .2rem solid whitesmoke;
+    border-radius: 5rem;
+    background: #fff;
+    color: #0066c8;
+}
+}
