@@ -52,9 +52,13 @@ header{
 
 h1{
     color:rgba(245, 245, 245, 0.15);
-    padding: 100px 0 0 100px;
+    padding: 100px 0 10px 100px;
+    display: block;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.05);
 
 }
+
+
 
 #menu__icon{
     opacity: 0;
@@ -226,7 +230,7 @@ header label{
     width: 100%;
     left: -0.09%;
     text-align: center;
-    background: var(--violet);
+    background: var(--azul);
     color: whitesmoke;
     font-size: 1rem;
 }
