@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Document</title>
+    <title>LiveCode</title>
+    <link rel="shortcut icon" href="/assets/84216.png">
 </head>
 <body>
     <header>
-        <a href="" class="nav__logo"></a>
+        <a href="" class="nav__logo"><span>< </span>Live<b>Code</b> /></a>
 
         <input type="checkbox" id="menu__bar">
         <label for="menu__bar" class="fa fa-bars" id="menu__icon"></label>
@@ -20,23 +21,29 @@
             <label for="search_input">Buscar</label>
         </form>
         <div class="nav__bar">
-            <a href=""><i class="fa-solid fa-book"></i> CURSOS</a>
-            <a href=""><i class="fa-solid fa-spinner"></i> MI PROGRESO</a>
+            <a href="#progreso"><i class="fa-solid fa-spinner"></i> MI PROGRESO</a>
+            <a href="#cursos"><i class="fa-solid fa-book"></i> CURSOS</a>
             <a href=""><i class="fa-solid fa-right-to-bracket"></i> INICIAR SESIÓN</a>
         </div>
     </header>
-
-    <section class="continue" data-aos="fade-right">
+    <div class="skip">
+        <p id="skip-l"><</p>
+        <p id="skip-r">></p>
+    </div>
+    <h1 id="progreso">< Tu aprendizaje /></h1>
+    <section class="1">
+    <div class="continue" data-aos="fade-right">
         <div class="continue_description">
-            <i class="fa-solid fa-play"></i>
-            <h2 class="continue_title">Continuá aprendiendo</h2>
-            <p class="continue_paragraph">haciendo click en el boton de play</p>
-        </div>
-        <div class="continue_video">
+            <div class="texto">  
+                <i class="fa-solid fa-play"></i>
+                <h2 class="continue_title">Continuá aprendiendo</h2>
+                <p class="continue_paragraph">haciendo click en el boton de play</p>
+            </div>
             <img src="/assets/maxresdefault.jpg" class="video"></img>
         </div>
-    </section>
-
+    </div>
+</section>
+    <h1 id="cursos">< Nuestros cursos /></h1>
     <section class="categorys">
         <div class="categorys_container">
             <div class="categorys_box" data-aos="zoom-in" data-aos-delay="200">
