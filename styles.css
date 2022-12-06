@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 :root {
-    --azul: #0066c8;
-    --verde: #00f7ff;
+    --azul: #2563ea;
+    --violet: #9334ea;
+    --fondo: #111828;
   }
+
+html{
+    background: var(--fondo)
+}
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,14 +25,13 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    background: rgb(0,102,200);
-    background: linear-gradient(0deg, rgba(0,102,200,1) 0%, rgba(0,194,255,1) 100%);
+    background: var(--fondo);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.753);
     padding: 1.5rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: .1px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #menu__icon{
@@ -37,6 +41,7 @@ header{
 header .nav__logo{
     font-size: 2rem;
     color: white;
+    font-size: 1.4rem;
 }
 
 header .nav__bar a{
@@ -45,13 +50,12 @@ header .nav__bar a{
     color: whitesmoke;
 }
 
-header .nav__bar a:nth-child(3){
-    border-bottom: 2px solid whitesmoke;
-    
-}
 
 header .nav__bar a:hover{
-    color: var(--verde);
+    transition: all ease .2s;
+    color:#111;
+    padding: .38rem .7rem; 
+    background: white;
 }
 
 
@@ -70,25 +74,32 @@ header .nav__bar a:hover{
 header .search input{
     width: 90%;
     height: 1rem;
-    border-radius: 5rem;
+    border-radius: .1rem;
     padding: 1rem 1.5rem;
 
 }
 
 header .search label{
-    margin: .5rem;
-    padding: .1rem 1rem;
+    margin: 0 .5rem;
+    padding: .38rem 1rem;
     font-size: 1rem;
-    border: .2rem solid whitesmoke;
-    border-radius: 5rem;
+    border-radius: .1rem;
     background: #fff;
     color: #0066c8;
 }
 
+header .search label:hover{
+    transition: .3s ease;
+    background:#111;
+    color: aliceblue;
+}
+
+
+
 
 header label{
     font-size: 3rem;
-    color: var(--verde);
+    color: var(--violet);
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
@@ -99,97 +110,142 @@ header label{
 }
 
 .continue{
-    padding: 1rem;
+    margin: 10vh 11vw ;
     display: flex;
-    margin: 90px 15%;
     align-items: center;
     justify-content: center;
-    border-radius: .4rem;
-    background: rgb(0,102,200);
-    background: linear-gradient(0deg, rgba(0,102,200,1) 0%, rgba(0,194,255,1) 100%);
     text-align: center;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+    border-radius: .1rem;
+    background: var(--azul);
+
 }
 
 .continue .continue_title{
-    font-size: 1.72rem;
+    user-select: none;
+    font-size: 2.2rem;
     color: whitesmoke;
-    text-shadow: 2px 3px 1px black;
-    margin: .5rem 1rem;
+    margin-top: 70px;
+}
+
+.continue .continue_description i{
+    
+    margin-top: 80px;
+    scale: 7;
+    color: white;
+    animation: infinite 1.5s;
+    animation-name: play;
+
+}
+
+@keyframes play{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.15);
+    }
+
+}
+
+.continue .continue_description i:hover{
+    color:#111;
+    transition: 0.5s ease;
 }
 
 .continue .continue_paragraph{
-    font-size: 100%;
-    margin: .5rem 2rem;
-    color: aliceblue;
-    text-shadow: 3px 1px 1px rgba(0, 0, 0, .2);
+    color: #fff;
 }
 
 .continue_video img{
-    width: 98%;
-    border-radius: .4rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
-    
+    margin: 2rem;
+    padding-left: 10% ;
+    height: 500px;
 }
-.categorys{
 
-    height: 300px;
-    width: 100%;
+
+.categorys{
+    position: relative;
+    height: 500px;
     margin-top: -60px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .categorys_container{
     display: flex;
-    justify-content:space-around;
+    flex-wrap: wrap;
+   
+
 }
 .categorys_box{
-    border-radius: .4rem;
+    margin: 0 1.5rem;
+    height: 450px;
+    flex: 1 1 5rem;
+    margin-bottom: 30px;
+    border-radius: .2rem;
     padding: 1rem;
-    width: 15%;
-    background: rgb(0,102,200);
-    background: linear-gradient(0deg, rgba(0,102,200,1) 0%, rgba(0,194,255,1) 100%);
-    box-shadow: .3rem .5rem .4rem rgba(0, 0, 0, .6);
+    background: rgba(34, 34, 34, 0.37);
 }
+
 
 .categorys_box h5{
+    position: absolute;
+    padding: .25rem;
+    top: 0;
+    width: 100%;
+    left: -0.09%;
     text-align: center;
+    background: var(--violet);
+    color: whitesmoke;
     font-size: 1rem;
-    color: black;
-    padding-bottom: 10px;
 }
 
-.categorys_box .tech{
+.categorys_box .image{
+    margin-top: 10%;
     text-align: center;
-    font-size: 2rem;
-    text-transform: capitalize;
-    border: 2px solid whitesmoke;
-    color: aliceblue;
-    border-radius: .5rem;
-    
+}
+
+.categorys_box .image img{
+    width: 170px;
+}
+
+
+
+.categorys_box li:first-child{
+    margin-top: 20px;
 }
 
 .categorys_box li{
+    display: block;
+    text-align: center;
+    background: #111;
+    margin-top: 10px;
     list-style: none;
     padding: .5rem .6rem;
-    text-transform: capitalize;
-    font-size: 100%;
-    color: azure;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white
+}
+
+.categorys_box li i{
+    color: green;
 }
 
 .btn{
     text-align: center;
-    display: block;
-    margin-left: 10%;
-    margin-top: 10px;
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(37,99,234,1) 0%, rgba(147,52,234,1) 100%);
     width: 80%;
-    text-decoration: none;
-    border: 2px solid #222;
-    background-color: #111;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    color: var(--verde);
-    border-radius: 1rem;
+    margin-left: 10%;
+    margin-top: 15%;
+    padding: 10px 0;
     text-transform: uppercase;
-    box-shadow: 0 .25rem .2rem rgba(0, 0, 0, .6);
+    color: azure;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: .2s;
+    color: var(--fondo);
 }
 
 
@@ -215,7 +271,7 @@ header label{
     #menu__icon{
         opacity: 1;
         font-size: 2rem;
-        color: var(--verde);
+        color: var(--fondo);
     }
 
     header .nav__bar a{

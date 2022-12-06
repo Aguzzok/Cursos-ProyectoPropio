@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <a href="" class="nav__logo">CPS</a>
+        <a href="" class="nav__logo"></a>
 
         <input type="checkbox" id="menu__bar">
         <label for="menu__bar" class="fa fa-bars" id="menu__icon"></label>
@@ -19,17 +20,17 @@
             <label for="search_input">Buscar</label>
         </form>
         <div class="nav__bar">
-            <a href="">CURSOS</a>
-            <a href="">MI PROGRESO</a>
-            <a href="">INICIAR SESIÓN</a>
-            <a href=""><i class="fa-solid fa-circle-half-stroke"></i></a>
+            <a href=""><i class="fa-solid fa-book"></i> CURSOS</a>
+            <a href=""><i class="fa-solid fa-spinner"></i> MI PROGRESO</a>
+            <a href=""><i class="fa-solid fa-right-to-bracket"></i> INICIAR SESIÓN</a>
         </div>
     </header>
 
-    <section class="continue">
+    <section class="continue" data-aos="fade-right">
         <div class="continue_description">
-            <h2 class="continue_title">Continuá viendo tu curso!</h2>
-            <p class="continue_paragraph">Recordá que podes ver tu barra de progreso en la sección "Mi progreso".</p>
+            <i class="fa-solid fa-play"></i>
+            <h2 class="continue_title">Continuá aprendiendo</h2>
+            <p class="continue_paragraph">haciendo click en el boton de play</p>
         </div>
         <div class="continue_video">
             <img src="/assets/maxresdefault.jpg" class="video"></img>
@@ -38,52 +39,62 @@
 
     <section class="categorys">
         <div class="categorys_container">
-            <div class="categorys_box">
+            <div class="categorys_box" data-aos="zoom-in" data-aos-delay="200">
                 <h5>Aprende ahora</h5>
-                <h3 class="tech">PHP</h3>
+                <div class="image">
+                    <img src="/assets/1PHP.png" alt="">
+                </div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> php</li>
-                    <li><i class="fa-solid fa-check"></i> mysql</li>
-                    <li><i class="fa-solid fa-check"></i> laravel</li>
-                    <li><i class="fa-solid fa-check"></i> git</li>
-                </ul>
-                <a href="" class="btn">empezar curso</a>
+                    <li>php</li>
+                    <li>mysql</li>
+                    <li>laravel</li>
+                    <li>git</li>
+                <a href="" class="btn"><b>ver curso</b></a>
             </div>
-            <div class="categorys_box">
+            <div class="categorys_box" data-aos="zoom-in" data-aos-delay="300">
                 <h5>Aprende ahora</h5>
-                <h3 class="tech">C#</h3>
+                <div class="image">
+                    <img id="csharp" src="/assets/4cs.png" alt="">
+                </div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> C#</li>
-                    <li><i class="fa-solid fa-check"></i> POO</li>
-                    <li><i class="fa-solid fa-check"></i> SQL Server</li>
-                    <li><i class="fa-solid fa-check"></i> Entity framework</li>
+                    <li>C#</li>
+                    <li>POO</li>
+                    <li>SQL Server</li>
+                    <li>Entity framework</li>
                 </ul>
-                <a href="" class="btn">empezar curso</a>
+                <a href="" class="btn"><b>ver curso</b></a>
             </div>
-            <div class="categorys_box">
+            <div class="categorys_box" data-aos="zoom-in" data-aos-delay="400">
                 <h5>Aprende ahora</h5>
-                <h3 class="tech">Javascript</h3>
+                <div class="image">
+                    <img src="/assets/2js.png" alt="">
+                </div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Javascript</li>
-                    <li><i class="fa-solid fa-check"></i> sequalize</li>
-                    <li><i class="fa-solid fa-check"></i> DOM</li>
-                    <li><i class="fa-solid fa-check"></i> Typescript</li>
+                    <li>Javascript</li>
+                    <li>sequalize</li>
+                    <li>DOM</li>
+                    <li>Typescript</li>
                 </ul>
-                <a href="" class="btn">empezar curso</a>
+                <a href="" class="btn"><b>ver curso</b></a>
             </div>
-            <div class="categorys_box">
+            <div class="categorys_box" data-aos="zoom-in" data-aos-delay="500">
                 <h5>Aprende ahora</h5>
-                <h3 class="tech">pyhton</h3>
+                <div class="image">
+                    <img src="/assets/3py.png" alt="">
+                </div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Python</li>
-                    <li><i class="fa-solid fa-check"></i> mongoDB</li>
-                    <li><i class="fa-solid fa-check"></i> Data analyst</li>
-                    <li><i class="fa-solid fa-check"></i> git</li>
+                    <li>Python</li>
+                    <li>mongoDB</li>
+                    <li>Data analyst</li>
+                    <li>git</li>
                 </ul>
-                <a href="" class="btn">empezar curso</a>
+                <a href="" class="btn"><b>ver curso</b></a>
             </div>
         </div>
     </section>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
